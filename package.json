@@ -13,5 +13,19 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "pg": "^8.2.1"
-  }
+  },
+  "description": "\"# bjatapp\"",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProfessorPain/BJAT-APP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProfessorPain/BJAT-APP/issues"
+  },
+  "homepage": "https://github.com/ProfessorPain/BJAT-APP#readme"
 }
