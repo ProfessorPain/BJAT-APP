@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BJATapp</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+<div class="header">
+<img src="/images/logo.png" alt="W3Schools.com" width="122" height="122" align="left">
+  <h1>BJATapp</h1>
+
+  <p>Information about student BJAT test scores in Belize</p>
+  
+</div>
+
+<div class="topnav">
+  <a href="#">About Application</a>
+  <a href="#">About Course</a>
+  <a href="https://www.youtube.com/watch?v=FavUpD_IjVY">Cows</a>
+</div>
+<div class="row">
+
+  <div class="column">
+    <h2>Belize Districts</h2>
+   <h3>Criteria</h3>
+   <img id="belizeImage" src="/images/belizedistrict.png" alt="W3Schools.com" height = "310" align="right">
+<p><button class="button" onclick="document.getElementById('belizeImage').src='/images/belizedistrict.png'">Belize</button></p>
+<p><button class="button" onclick="document.getElementById('belizeImage').src='/images/cayodistrict.png'">Cayo</button></p>
+<p><button class="button" onclick="document.getElementById('belizeImage').src='/images/corozaldistrict.png'">Corozal</button></p>
+<p><button class="button" onclick="document.getElementById('belizeImage').src='/images/orangewalkdistrict.png'">Orange Walk</button></p>
+<p><button class="button" onclick="document.getElementById('belizeImage').src='/images/stanncreekdistrict.png'">Stann Creek</button></p>
+<p><button class="button" onclick="document.getElementById('belizeImage').src='/images/toledodistrict.png'">Toledo</button></p>
+
+  </div>
+
+
+  <div class="column">
+    <h2></h2>
+   <h2>	BJAT SCORES</h2>
+   <center>
+<% if(results.length) { %>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">DISTRICT</th>
+                    <th scope="col">BJAT AVERAGE</th>
+                    <th width="200px"></th>
+                </tr>
+            </thead>
+            <tbody>
+             <% results.forEach(function(r) { %>
+                <tr>
+				
+                    <th scope="row"></th>
+                   <td><%= r.district %></td>
+                    <td><center><%= r.avg %><center></td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+        <% } %>
+
+        <!-- if result is empty -->
+        <% if(!results.length) { %>
+            <p class="text-center">No record found!</p>
+        <% } %>
+    </center>
+  </div>
+  
+    <div class="column">
+    <h2>Test: BJAT</h2>
+   <h3>Criteria</h3>
+<p><a href="/funding" class="button button2">Funding</a></p>
+<p><a href="/municipality" class="button button2">Municipality</a></p>
+<p><a href="/ur" class="button button2">Urban/Rural</a></p>
+<p><a href="/management" class="button button2">Management</a></p>
+<p><a href="/school" class="button button2">School</a></p>
+
+  </div>
+  
+
+
+</div>
+
+<div class="footer">
+  <p><a href="https://ub.edu.bz">Powered by UB </a></p>
+</div>
+
+
+</body>
+</html>
