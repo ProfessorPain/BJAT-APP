@@ -11,6 +11,8 @@ var municipalityRouter = require('./routes/index')
 var urRouter = require('./routes/index')
 var managementRouter = require('./routes/index')
 var schoolRouter = require('./routes/index')
+var applicationRouter = require('./routes/index')
+var courseRouter = require('./routes/index')
 
 var app = express();
 
@@ -26,6 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use(express.static('javascripts'));
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

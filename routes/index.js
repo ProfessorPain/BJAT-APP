@@ -96,4 +96,10 @@ router.get('/municipality', async (req, res) => {
       res.send("Error " + err);
     }
   })
+  router.get('/application', function (req, res) {
+	  res.render('application', {title: 'Application'});
+  })
+  router.get('/course', function (req, res) {
+	  res.render('course', {title: 'Course'});
+  })
 module.exports = router;
